@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_netflix/pages/home_page.dart';
+import 'package:flutter_netflix/pages/onboarding_page.dart';
 import 'package:lottie/lottie.dart';
 
 class MyLoadingPage extends StatefulWidget {
@@ -39,7 +39,7 @@ class _MyLoadingPageState extends State<MyLoadingPage> {
 
   void onLoading() {
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => const MyHomePage())
+      MaterialPageRoute(builder: (context) => const OnboardingPage())
     );
   }
 
