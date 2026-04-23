@@ -23,12 +23,12 @@ class _MyLoadingPageState extends State<MyLoadingPage> {
   // (Methode 2) Fonction de timer qui execute la fonction (Methode1) après un délais
   Future<Timer> loadAnimation() async {
     return Timer(
-      const Duration(seconds: 3),
+      const Duration(seconds: 5),
       onLoading
     );
   }
 
-  // Fonction qui rédirige l'utilisateur à la page d'accueil (quant l'animation est finie)
+  // Fonction qui rédirige l'utilisateur à la page d'accueil (quant l'animation est finis)
   /*void onLoading() {
     Navigator.pushNamed(
         context,
@@ -36,11 +36,13 @@ class _MyLoadingPageState extends State<MyLoadingPage> {
     );
   }*/
   // Avec pushNamed, la page home obtient un icon button de retour par défaut
+
   void onLoading() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(builder: (context) => const MyHomePage())
     );
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,7 @@ class _MyLoadingPageState extends State<MyLoadingPage> {
       body: Center(
         child: Lottie.asset(
             "res/assets/lotties/netflix.json",
-          repeat: false // Ne pas répéter l'animations
+          repeat: false // Ne pas répéter l'animation
         ),
       ),
     );
