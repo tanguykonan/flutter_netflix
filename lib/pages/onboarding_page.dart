@@ -36,7 +36,12 @@ class _OnboardingPage extends State<OnboardingPage> {
               )
           ),
           TextButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.pushNamed(
+                    context,
+                    '/signin'
+                );
+              },
               child: Text(
                 "SING IN",
                 style: TextStyle(
@@ -100,7 +105,12 @@ class _OnboardingPage extends State<OnboardingPage> {
                           borderRadius: BorderRadius.circular(0)
                         )
                       ),
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.pushNamed(
+                         context,
+                          '/signin'
+                        );
+                      },
                       child: const Text("Get Started")
                   ),
                 )
